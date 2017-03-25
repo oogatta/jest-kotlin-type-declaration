@@ -1,23 +1,22 @@
 # TODO
 
-  - [ ] change namespace.
-  - [ ] make gradle do these compiling jobs.
+  - [ ] change namespace to somewhere else
+  - [x] make gradle do these compiling jobs.
 
 # Current files
 
   - Converted from https://github.com/DefinitelyTyped/DefinitelyTyped/blob/ecbeaa15c0a5816067fe267f574c1705e51e773e/jest/index.d.ts (jest 16.00).
-  - Current ts2kt can handle d.ts from TypeScript <= 2.0.
+  - Current ts2kt can handle d.ts files from TypeScript <= 2.0.
   - And some tweak...
 
 # Make jar
 
-```bash
-$ kotlinc-js -output output/jest-kotlin-type-declaration.js -meta-info src/main/kotlin/com/oogatta/kotlin/jest/
-$ cd output
-$ jar cf jest-kotlin-type-declaration.jar jest-kotlin-type-declaration*
+```
+$ gradle jar
 ```
 
 # Use
+
 
 ```gradle
 dependencies {

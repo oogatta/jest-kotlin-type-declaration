@@ -12,7 +12,7 @@ buildscript {
     }
 }
 
-apply plugin: 'kotlin'
+apply plugin: 'kotlin2js'
 
 repositories {
     mavenCentral()
@@ -20,4 +20,14 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+}
+
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.outputFile = "output/jest-kotlin-type-declaration.js"
+}
+
+jar {
+    baseName = "jest-kotlin-type-declaration"
+    from "output"
 }
