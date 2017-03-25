@@ -24,10 +24,11 @@ dependencies {
 
 compileKotlin2Js {
     kotlinOptions.metaInfo = true
-    kotlinOptions.outputFile = "output/jest-kotlin-type-declaration.js"
+    kotlinOptions.outputFile = new File(project.buildDir, "js/jest-kotlin-type-declaration.js");
 }
 
 jar {
     baseName = "jest-kotlin-type-declaration"
-    from "output"
+    from new File(project.buildDir, "js")
+    jar.duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
