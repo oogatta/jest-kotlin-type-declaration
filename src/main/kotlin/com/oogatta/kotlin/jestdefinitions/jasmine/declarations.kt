@@ -1,6 +1,7 @@
 @file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS")
+@file:[JsQualifier("jasmine")]
 
-package com.oogatta.kotlin.jest.jasmine
+package com.oogatta.kotlin.jestdefinitions.jasmine
 
 import kotlin.js.*
 

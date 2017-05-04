@@ -1,6 +1,6 @@
 # TODO
 
-  - [ ] change namespace to somewhere else
+  - [x] change namespace to somewhere else
   - [x] make gradle do these compiling jobs.
 
 # Current files
@@ -28,7 +28,7 @@ dependencies {
 ```kotlin
 package com.example
 
-import com.oogatta.kotlin.jest.*
+import com.oogatta.kotlin.jestdefinitions.*
 
 fun main(args: Array<String>) {
     test("3 equals 3") {

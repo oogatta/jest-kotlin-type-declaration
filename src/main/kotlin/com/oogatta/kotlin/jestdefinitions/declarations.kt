@@ -1,10 +1,10 @@
 @file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS")
 
-package com.oogatta.kotlin.jest
+package com.oogatta.kotlin.jestdefinitions
 
 import kotlin.js.*
-import com.oogatta.kotlin.jest.jest.*
-import com.oogatta.kotlin.jest.jasmine.*
+import com.oogatta.kotlin.jestdefinitions.jest.*
+import com.oogatta.kotlin.jestdefinitions.jasmine.*
 
 external var beforeAll: Lifecycle = definedExternally
 external var beforeEach: Lifecycle = definedExternally

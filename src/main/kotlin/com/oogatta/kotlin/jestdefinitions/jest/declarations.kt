@@ -1,9 +1,14 @@
 @file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS")
+@file:[JsQualifier("jest")]
 
-package com.oogatta.kotlin.jest.jest
+// 1.0.5
+
+package com.oogatta.kotlin.jestdefinitions.jest
 
 import kotlin.js.*
-import com.oogatta.kotlin.jest.jasmine.*
+import com.oogatta.kotlin.jestdefinitions.jasmine.*
+
+external val oogatta: dynamic = definedExternally
 
 external fun addMatchers(matchers: CustomMatcherFactories): dynamic /* "TypeQuery" kind unsupported yet here! (index.d.ts:29:68 to 29:80) */ = definedExternally
 external fun autoMockOff(): dynamic /* "TypeQuery" kind unsupported yet here! (index.d.ts:31:28 to 31:40) */ = definedExternally
@@ -117,3 +122,5 @@ external interface MockContext<T> {
     var calls: Array<Array<Any>>
     var instances: Array<T>
 }
+
+external fun sugomock(moduleName: String, factory: Any? = definedExternally /* null */, options: MockOptions? = definedExternally /* null */): dynamic /* "TypeQuery" kind unsupported yet here! (index.d.ts:55:77 to 55:89) */ = definedExternally

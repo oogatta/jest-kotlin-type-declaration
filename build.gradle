@@ -1,5 +1,5 @@
 group 'com.oogatta.kotlin'
-version '1.0-SNAPSHOT'
+version '1.0.5'
 
 buildscript {
     ext.kotlin_version = '1.1.2-2'
@@ -24,11 +24,11 @@ dependencies {
 
 compileKotlin2Js {
     kotlinOptions.metaInfo = true
-    kotlinOptions.outputFile = new File(project.buildDir as File, "js/jest-kotlin-type-declaration.js")
+    kotlinOptions.outputFile = new File(project.buildDir as File, "js/jestdefinitions-kotlin-type-declaration.js")
 }
 
 jar {
-    baseName = "jest-kotlin-type-declaration"
+    baseName = "jestdefinitions-kotlin-type-declaration"
     from new File(project.buildDir as File, "js")
     jar.duplicatesStrategy = DuplicatesStrategy.EXCLUDE // why I need this?
 }
