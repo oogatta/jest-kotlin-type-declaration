@@ -1,7 +1,7 @@
 @file:Suppress("INTERFACE_WITH_SUPERCLASS", "OVERRIDING_FINAL_MEMBER", "RETURN_TYPE_MISMATCH_ON_OVERRIDE", "CONFLICTING_OVERLOADS")
 @file:[JsQualifier("jest")]
 
-// 1.0.5
+// 1.0.7
 
 package com.oogatta.kotlin.jestdefinitions.jest
 
@@ -53,11 +53,11 @@ external interface DoneCallback {
 }
 external interface ProvidesCallback {
     @nativeInvoke
-    operator fun invoke(cb: DoneCallback): Any
+    operator fun invoke(cb: dynamic): Any
 }
 external interface Lifecycle {
     @nativeInvoke
-    operator fun invoke(fn: ProvidesCallback): Any
+    operator fun invoke(fn: dynamic): Any
 }
 external interface It {
     @nativeInvoke
@@ -68,7 +68,7 @@ external interface It {
 }
 external interface Describe {
     @nativeInvoke
-    operator fun invoke(name: String, fn: EmptyFunction)
+    operator fun invoke(name: String, fn: dynamic)
     var only: Describe
     var skip: Describe
 }
